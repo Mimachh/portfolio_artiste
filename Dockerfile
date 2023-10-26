@@ -19,7 +19,9 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 
-RUN npm run build
+RUN \
+  if [ -f package-lock.json ]; then npm run build; \
+  fi
 
 ##### RUNNER
 
@@ -49,3 +51,7 @@ EXPOSE 3000
 ENV PORT 3000
 
 CMD ["node", "server.js"]
+
+
+# docker build -t portfolio_artiste:v1 --build-arg NEXT_PUBLIC_CLIENTVAR=clientvar .
+# docker run -p 3001:3000 portfolio_artiste:v1

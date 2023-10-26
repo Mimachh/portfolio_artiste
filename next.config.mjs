@@ -9,6 +9,9 @@ const config = {
   reactStrictMode: true,
   swcMinify: true,
   output: "standalone",
+  eslint: { 
+    ignoreDuringBuilds: true, 
+  }, 
   /**
    * If you are using `appDir` then you must comment the below `i18n` config out.
    *

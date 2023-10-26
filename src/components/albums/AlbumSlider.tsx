@@ -8,7 +8,6 @@ import { EffectCoverflow, FreeMode, Navigation, Thumbs } from 'swiper/modules'
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination'
-import { PlayerContext, PlayerContextProps } from '@/context/PlayerContext'
 import { albums } from '@/utils/constants'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
@@ -26,8 +25,7 @@ interface AlbumProps {
 }
 
 export default function AlbumSlider() {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null)
-  const {isPlayerOpen, setIsPlayerOpen, setTrackToPlay} = useContext(PlayerContext) as PlayerContextProps;
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null)
     
     // const  {data, error} = useSWR('http://localhost:4000/albums', fetcher);
     // if(error) return 'Failed to fetch albums';

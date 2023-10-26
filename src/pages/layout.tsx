@@ -5,7 +5,6 @@ import Head from 'next/head';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { NavProvider } from '@/context/NavContext';
-import { PlayerProvider } from '@/context/PlayerContext';
 
 const alexBrush = Alex_Brush({ 
   weight: ['400'],
@@ -28,7 +27,6 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ title, children }) => {
   return (
     <NavProvider>
-      <PlayerProvider>
         <div>
           <Head>
             <title>{title || 'Mia Reynolds Portfolio'}</title>
@@ -39,7 +37,6 @@ const Layout: React.FC<LayoutProps> = ({ title, children }) => {
           </main>
           <Footer />
         </div>
-      </PlayerProvider>
     </NavProvider>
   );
 };
