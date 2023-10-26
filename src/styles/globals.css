@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+
+@layer base {
+  :root {
+    /* --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 24.6 95% 53.1%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 60 4.8% 95.9%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 24.6 95% 53.1%;
+    --radius: 1rem; */
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 20.5 90.2% 48.2%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 20.5 90.2% 48.2%;
+    --radius: 1rem;
+  }
+ 
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 20.5 90.2% 48.2%;
+    --primary-foreground: 60 9.1% 97.8%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 20.5 90.2% 48.2%;
+  }
+
+
+}
+
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-montserrat text-white;
+  }
+  .pretitle {
+    @apply text-[42px] font-alexBrush leading-none;
+  }
+  .h2 {
+    @apply text-[32px] xl:text-[38px] font-semibold leading-tight
+  }
+  .btn {
+    @apply w-full rounded-full cursor-pointer transition-all flex justify-center items-center font-medium
+  }
+
+  .btn-sm {
+    @apply w-[146px] h-[50px]
+  }
+
+  .btn-lg{
+    @apply w-[160px] h-[54px]
+  }
+
+  .btn-accent {
+    @apply bg-primary/80 text-white hover:bg-primary/50;
+  }
+
+  .section {
+    @apply py-12 xl:py-24
+  }
+
+  .my-text-accent {
+    @apply text-primary/80;
+  }
+
+
+}
+
+.rap-progress {
+  @apply !bg-primary/80;
+}
+
+.rap-pin {
+  @apply !bg-primary;
+}
+
+.rap-container {
+  @apply !p-0;
+}
+
+.rap-container .rap-slider .rap-progress .rap-pin {
+  @apply !w-[14px] !h-[14px] !bg-white;
+}
+
+.rap-container .rap-controls .rap-slider .rap-progress .rap-pin:hover {
+  @apply scale-[1.2] transition-all duration-300
+}
+
+.rap-container .rap-pp-button svg {
+  @apply w-[14px];
+}
+
+.rap-container .rap-volume .rap-volume-btn svg {
+  @apply w-[22px];
+}
+
+.rap-container .rap-pp-button svg path,
+.rap-container .rap-volume .rap-volume-btn svg path {
+  @apply fill-primary/80
+}
+
+.rap-current-time,
+.rap-total-time {
+  @apply font-montserrat text-[13px] font-medium;
+}
+
+.rap-container .rap-slider {
+  @apply !bg-primary/20 !h-[2px]
+}
+
+.rap-container .rap-controls span {
+  @apply text-[15px];
+}
+
+.rap-volume-btn.rap-volume-open svg path {
+  @apply !fill-white 
+}
+
+.rap-volume-controls {
+  @apply !bg-primary/10
+}
+
+.active {
+  @apply border-b-2 border-primary/80
+}
+
+
+/* Albume slider */
+
+.album-slider .rap-container .rap-volume-controls {
+  @apply !bg-primary/60
+}
+
+.album-slider .rap-container .rap-slider {
+  @apply !bg-accent;
+}
+
+.album-slider .rap-container .rap-slider .rap-progress {
+  @apply !bg-white;
+}
+
+.album-slider .rap-container .rap-pp-button svg {
+  @apply w-[12px];
+}
+
+.album-slider .rap-container .rap-volume .rap-volume-btn svg {
+  @apply w-[20px];
+}
+
+.album-slider .rap-container .rap-pp-button svg path,
+.album-slider .rap-container .rap-volume .rap-volume-btn svg path {
+  @apply fill-primary/80
+}
+
+.album-slider .rap-container .rap-controls span {
+ @apply !text-sm
+}
+
+.album-player {
+  @apply !w-[110px] !min-w-0 text-center;
+}
+
+.album-player .rap-controls .rap-slider,
+.album-player .rap-controls .rap-total-time {
+  @apply hidden;
+}
+
+/* thumb slider */
+.thumb-slider .swiper-slide-thumb-active {
+  @apply border-2 border-primary/80 overflow-hidden transition-all duration-700
+}
